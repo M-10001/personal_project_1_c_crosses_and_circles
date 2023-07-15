@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <gtk/gtk.h>
 
-static void activate_application (GtkApplication* app, gpointer user_data){
+static void activate (GtkApplication* app, gpointer user_data){
   GtkWidget *window_1;
 
   window_1 = gtk_application_window_new (app);
@@ -12,12 +12,8 @@ static void activate_application (GtkApplication* app, gpointer user_data){
 
 int main (int argc, char **argv){
   GtkApplication * application;
-  int status;
-
+  
   application = gtk_application_new("crosses.and.circles._1", G_APPLICATION_DEFAULT_FLAGS);
-  g_signal_connect(application, "activate", G_CALLBACK(activate_application), NULL);
-  status = g_application_run(G_APPLICATION(application), argc, argv);
-  g_object_unref(application);
-
-  return status;
+  g_signal_connect(application, "activate", G_CALLBACK(activate), NULL);
+  return g_application_run(G_APPLICATION(application), argc, argv);
 }
