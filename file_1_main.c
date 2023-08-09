@@ -15,6 +15,8 @@ static void activate (GtkApplication* app, gpointer user_data){
 
   level_2_1_container = gtk_stack_new();
   gtk_container_add(GTK_CONTAINER(level_1_1_window), level_2_1_container);
+  gtk_stack_set_transition_type(GTK_STACK(level_2_1_container), GTK_STACK_TRANSITION_TYPE_CROSSFADE);
+  gtk_stack_set_transition_duration(GTK_STACK(level_2_1_container), 500);
 
   load_scene_1(GTK_STACK(level_2_1_container));
 
