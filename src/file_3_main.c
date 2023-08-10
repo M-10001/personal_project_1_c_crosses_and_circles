@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <gtk/gtk.h>
-#include "file_2_scene_1.h"
-
-const int DEFAULT_WIDTH = 500;
-const int DEFAULT_HEIGHT = 500;
+#include "file_1_constants.h"
+#include "file_4_scene_1.h"
 
 static void activate (GtkApplication* app, gpointer user_data){
   GtkWidget * level_1_1_window;
@@ -12,6 +10,7 @@ static void activate (GtkApplication* app, gpointer user_data){
   level_1_1_window = gtk_application_window_new (app);
   gtk_window_set_title(GTK_WINDOW(level_1_1_window), "Crosses and circles");
   gtk_window_set_default_size(GTK_WINDOW(level_1_1_window), DEFAULT_WIDTH, DEFAULT_HEIGHT);
+  gtk_window_set_position(GTK_WINDOW(level_1_1_window), GTK_WIN_POS_CENTER);
 
   level_2_1_container = gtk_stack_new();
   gtk_container_add(GTK_CONTAINER(level_1_1_window), level_2_1_container);
