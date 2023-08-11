@@ -1,4 +1,4 @@
-BINARY = 1_main.exe
+BINARY = executable_1_main.exe
 OBJDIR = ./directory_4_obj
 INCDIRS = ./directory_1_includes C:/msys64/mingw64/include/gtk-3.0 C:/msys64/mingw64/include/pango-1.0 C:/msys64/mingw64/include/glib-2.0 C:/msys64/mingw64/lib/glib-2.0/include C:/msys64/mingw64/include/harfbuzz C:/msys64/mingw64/include/freetype2 C:/msys64/mingw64/include/libpng16 C:/msys64/mingw64/include/fribidi C:/msys64/mingw64/include/cairo C:/msys64/mingw64/include/pixman-1 C:/msys64/mingw64/include/gdk-pixbuf-2.0 C:/msys64/mingw64/include/webp C:/msys64/mingw64/include/atk-1.0
 CFILEDIR = ./directory_3_src
