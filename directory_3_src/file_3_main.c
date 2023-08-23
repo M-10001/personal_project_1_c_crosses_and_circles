@@ -11,7 +11,7 @@ static void activate (GtkApplication* app, gpointer user_data){
   gtk_window_set_title(GTK_WINDOW(level_1_1_window), "Crosses and circles");
   gtk_window_set_default_size(GTK_WINDOW(level_1_1_window), DEFAULT_WIDTH, DEFAULT_HEIGHT);
   gtk_window_set_position(GTK_WINDOW(level_1_1_window), GTK_WIN_POS_CENTER);
-
+  
   level_2_1_container = gtk_stack_new();
   gtk_container_add(GTK_CONTAINER(level_1_1_window), level_2_1_container);
   gtk_stack_set_transition_type(GTK_STACK(level_2_1_container), GTK_STACK_TRANSITION_TYPE_CROSSFADE);

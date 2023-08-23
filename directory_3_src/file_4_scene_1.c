@@ -4,7 +4,7 @@
 #include "header_file_1_structs.h"
 
 static GtkStack * level_1_1_container;
-static Gtk_widget_with_scaling level_3_1_scaling_button;
+static Gtk_custom_widget level_3_1_scaling_button;
 
 void load_scene_1 (GtkStack * level_1_1_container){
     GtkBuilder * builder;
