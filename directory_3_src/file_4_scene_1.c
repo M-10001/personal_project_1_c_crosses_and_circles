@@ -3,16 +3,18 @@
 #include "file_2_helper_functions.h"
 #include "header_file_1_structs.h"
 
-static GtkStack * level_1_1_container;
-static Gtk_custom_widget level_3_1_scaling_button;
+static GtkWindow * level_1_1_window;
+static GtkStack * level_2_1_container;
+static Gtk_custom_widget_1 level_4_1_scaling_button;
 
-void load_scene_1 (GtkStack * level_1_1_container){
+void load_scene_1 (GtkWindow * _level_1_1_window, GtkStack * _level_2_1_container){
     GtkBuilder * builder;
     GError *error = NULL;
 
-    GtkWidget * level_2_1_container;
+    GtkWidget * level_3_1_container;
 
-    level_1_1_container = level_1_1_container;
+    level_1_1_window = _level_1_1_window;
+    level_2_1_container = _level_2_1_container;
 
     builder = gtk_builder_new ();
 
@@ -22,11 +24,11 @@ void load_scene_1 (GtkStack * level_1_1_container){
         gtk_main_quit();
     }
 
-    level_2_1_container = GTK_WIDGET(gtk_builder_get_object(builder, "level_2_1_container"));
+    level_3_1_container = GTK_WIDGET(gtk_builder_get_object(builder, "level_3_1_container"));
 
-    level_3_1_scaling_button.widget = GTK_WIDGET(gtk_builder_get_object(builder, "level_3_1_button"));
-    setup_dynamic_resizing_for_widget(&level_3_1_scaling_button);
+    level_4_1_scaling_button.widget = GTK_WIDGET(gtk_builder_get_object(builder, "level_4_1_button"));
+    setup_dynamic_resizing_for_widget(&level_4_1_scaling_button, level_1_1_window);
 
-    gtk_container_add(GTK_CONTAINER(level_1_1_container), level_2_1_container);
-    gtk_stack_set_visible_child(level_1_1_container, level_2_1_container);
+    gtk_container_add(GTK_CONTAINER(level_2_1_container), level_3_1_container);
+    gtk_stack_set_visible_child(level_2_1_container, level_3_1_container);
 }
