@@ -6,6 +6,8 @@
   <object class="GtkGrid" id="level_3_1_container">
     <property name="visible">True</property>
     <property name="can-focus">False</property>
+    <property name="hexpand">True</property>
+    <property name="vexpand">True</property>
     <child>
       <object class="GtkButton" id="level_4_1_button">
         <property name="label" translatable="yes">Start</property>

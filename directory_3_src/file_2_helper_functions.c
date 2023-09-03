@@ -5,13 +5,6 @@
 void widget_size_allocate_callback(GtkWidget * widget, GdkRectangle * allocation, gpointer user_data) {
     GtkWindow * parent_window = GTK_WINDOW(widget);
     Gtk_custom_widget_1 * custom_widget = (Gtk_custom_widget_1 *) user_data;
-    
-    //g_print("Allocated : %d\n", allocation->width);
-    //g_print("Allocated : %d\n", allocation->height);
-    //g_print("Allocated start: %d\n", (int) (scaling_widget->margin_start_scale * allocation->width));
-    //g_print("Allocated end: %d\n", (int) (scaling_widget->margin_end_scale * allocation->width));
-    //g_print("Allocated top: %d\n", (int) (scaling_widget->margin_top_scale * allocation->height));
-    //g_print("Allocated bottom: %d\n-----------\n", (int) (scaling_widget->margin_bottom_scale * allocation->height));
 
     int margin_start = (int) (custom_widget->margin_start_scale * allocation->width);
     int margin_end = (int) (custom_widget->margin_end_scale * allocation->width);
