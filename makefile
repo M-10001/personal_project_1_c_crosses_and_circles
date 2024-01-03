@@ -6,7 +6,7 @@ LIBS = gtk-3 gdk-3 z gdi32 imm32 shell32 ole32 uuid winmm dwmapi setupapi cfgmgr
 
 
 CC = gcc
-OBJMAKEFLAGS = -c -DLIBDEFLATE_DLL -MP -MD
+OBJFLAGS = -c -DLIBDEFLATE_DLL -MP -MD
 INCFLAGS = $(foreach D,$(INCDIRS),-I$(D))
 LIBFLAGS = $(foreach D,$(LIBS),-l$(D))
 
@@ -20,7 +20,7 @@ $(BINARY): $(OBJFILES)
 	$(CC) -o $@ $^ $(LIBFLAGS)
 
 $(OBJDIR)/%.o: $(CFILEDIR)/%.c
-	$(CC) $(OBJMAKEFLAGS) $(INCFLAGS) -o $@ $<
+	$(CC) $(OBJFLAGS) $(INCFLAGS) -o $@ $<
 
 -include $(DEPFILES)
 
